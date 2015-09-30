@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Places;
+use App\Place;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -20,7 +20,7 @@ class PlacesController extends Controller {
 	 */
 	public function index() {
 
-		$places = Places::all();
+		$places = Place::all();
 
 		return view('places/index')->with('places', $places);
 	}
@@ -43,7 +43,7 @@ class PlacesController extends Controller {
 	 */
 	public function store( Request $request ) {
 //        var_dump($request->all());
-		Places::create( $request->all() );
+		Place::create( $request->all() );
 
 		return redirect()->back();
 	}

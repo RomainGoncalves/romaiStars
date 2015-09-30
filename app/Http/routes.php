@@ -1,17 +1,9 @@
 <?php
 
-use App\Places;
+use App\Place;
 
 Route::get('/', function () {
-
-//    Auth::logout();
-    $places = Places::all();
-
-//    foreach($places as $place){
-//        var_dump($place->name);
-//
-//    }
-    return view('places/add')->with('places', $places);
+    return view('welcome');
 });
 
 //Route::get('login', function(){
